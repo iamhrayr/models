@@ -1,0 +1,29 @@
+{
+  "name": "Feedback",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "owner": {
+      "type": "string"
+    },
+    "modelId": {
+      "type": "string",
+      "required": true
+    },
+    "stars": {
+      "type": "number",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
