@@ -40,11 +40,11 @@ class Profile extends Component {
 
   renderUsers(){
     let {users} = this.props;
+    console.log(this.props);
     return (
       <ol>
-        {_.map(users, (user) => {
-          // console.log(user)
-          return <li>{user.email}</li>
+        {_.map(users.data, (user, id) => {
+          return <li key={id}>{user.email}</li>
         })}
       </ol>
     )
