@@ -17,6 +17,11 @@
       "type": "hasMany",
       "model": "Feedback",
       "foreignKey": ""
+    },
+    "modelInfos": {
+      "type": "hasOne",
+      "model": "ModelInfo",
+      "foreignKey": ""
     }
   },
   "acls": [

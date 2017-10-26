@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {signout, getUsers} from '../actions/user';
+import {signout, getUsers, getUsersDetails} from '../actions/user';
 import {withRouter} from 'react-router-dom';
 import _ from 'lodash';
 
@@ -40,10 +40,10 @@ class Profile extends Component {
 
   renderUsers(){
     let {users} = this.props;
-    console.log(this.props);
     return (
       <ol>
         {_.map(users.data, (user, id) => {
+          this.props.getUsersDetails(user.id);
           return <li key={id}>{user.email}</li>
         })}
       </ol>
@@ -77,4 +77,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {signout, getUsers})(withRouter(Profile));
+export default connect(mapStateToProps, {signout, getUsers, getUsersDetails})(withRouter(Profile));

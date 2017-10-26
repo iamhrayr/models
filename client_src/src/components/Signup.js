@@ -29,6 +29,9 @@ class Signup extends Component {
       }
 
       this.props.signup(email, password)
+        .then(res => {
+          this.props.history.push('/profile');
+        })
         .catch(err => {
           this.setState({error: err})
         });
