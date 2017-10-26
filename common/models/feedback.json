@@ -9,10 +9,6 @@
     "owner": {
       "type": "string"
     },
-    "modelId": {
-      "type": "string",
-      "required": true
-    },
     "stars": {
       "type": "number",
       "required": true
@@ -23,7 +19,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "userModel": {
+      "type": "belongsTo",
+      "model": "UserModel",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

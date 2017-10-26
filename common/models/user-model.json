@@ -7,7 +7,25 @@
   },
   "properties": {},
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "albums": {
+      "type": "hasMany",
+      "model": "Album",
+      "foreignKey": ""
+    },
+    "feedbacks": {
+      "type": "hasMany",
+      "model": "Feedback",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }
